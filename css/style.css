@@ -1,0 +1,2353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #3D3D3D;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: #DEDEDE;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #727272;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+wrapper {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 5fr);
+    grid-template-rows: 90vh;
+}
+
+.wrapper {
+    position: absolute;
+    width: 80%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper #logo {
+    text-align: center;
+    margin: auto 0;
+}
+
+.wrapper #logo h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper form input {
+    position: relative;
+    background-color: #EAEBEF;
+    padding: 1.2em 0em;
+    padding-left: 1em;
+    padding-right: 4em ;
+    border: none;
+    border-radius: 20px;
+}
+
+.wrapper form label *{
+    vertical-align:middle;
+}
+
+.wrapper form img {
+    position: relative;
+    margin-right: -0.8em;
+    z-index: 1;
+}
+
+.wrapper form label, #button {
+    margin-top: 1.5em;
+}
+
+.wrapper form #button {
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    margin: 1.5em auto;
+    background-color: #5271FF;
+    border: none;
+    border-radius: 20px;
+    width: 11.8em;
+    height: 3.8em;
+}
+
+.wrapper form h4 {
+    font-weight: 300;
+}
+
+.wrapper form a{
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 90vh;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    background-color: #2d2d2d;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sidebar #user_image {
+    width: 6em;
+    border-radius: 50%;
+    margin-bottom: 0.3em;
+    margin-top: 1em;
+}
+
+.sidebar #user {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 2em;
+}
+
+.sidebar #user h2 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.sidebar #user h2:first-of-type {
+    font-size: 1.6em;
+}
+
+.sidebar h1 {
+    font-size: 1.3em;
+}
+
+.sidebar #new_ticket {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #3D3D3D;
+    border-radius: 11px;
+    width: 13em;
+    height: 5em;
+    margin-bottom: 2em;
+}
+
+.sidebar #new_ticket_image {
+    width: 2.5em;
+}
+
+.sidebar #new_ticket p {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+    padding-bottom: 0.6em;
+    font-size: 2em;
+}
+
+.sidebar ul li a {
+    color: #DEDEDE;
+}
+
+.sidebar #logout {
+    margin-top: 2em;
+    color: #3d3d3d;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 550;
+    font-size: 0.8em;
+    width: 10em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logout a {
+    color: #3d3d3d;
+    font-size: 1.3em;
+}
+
+
+#ticket {
+    margin: auto;
+    height: 30em;
+    width: 65em;
+    padding: 3em;
+    background-color: #2d2d2d;
+    border-radius: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left:7em;
+    display: flex;
+    flex-direction: column;
+}
+
+#ticket h1 {
+    font-size: 2em;
+}
+
+.ticket-wrapper {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#description {
+    padding: 0.5em;
+    width: 50%;
+    text-align: justify;
+}
+
+#description h2 {
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 1em;
+}
+
+.ticket-info {
+    padding: 1em;
+    width: 35%;
+}
+
+.ticket-info li, .profile-right li {
+    margin-top: 0.7em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.ticket-info li:first-child {
+    margin-top: 0;
+}
+
+.edit-ticket-button {
+    margin-top: 1em;
+    float: right;
+    height: 3em;
+    width: 8em;
+    background-color: #dedede;
+    color: #3D3D3D;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}
+
+#tickets {
+    margin: auto;
+    height: 30em;
+    width: 65em;
+    padding: 3em;
+    background-color: #2d2d2d;
+    border-radius: 30px;
+}
+
+#tickets .titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+#tickets .tickets-forms {
+    display: flex;
+    gap: 1em;
+}
+
+.tickets-forms select {
+    height: 2em;
+    width: 8em;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.tickets-info {
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+    border-radius: 15px;
+}
+
+.tickets-table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+.tickets-table thead{
+    height: 3em;
+    background-color: #FFFFFF;
+    color: #2d2d2d;
+    border: none;
+    border-radius: 20px;
+}
+.tickets-table tbody{
+    background-color: #EFEFEF;
+    color: #3D3D3D;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+td {
+    height: 5em;
+}
+
+.tickets-table tbody td {
+    border-bottom: 1px solid #3D3D3D;
+}
+
+
+#ticket h1{
+    grid-column: 1 / span 1;
+}
+
+#ticket #description{
+    grid-column: 1 / span 1;
+    width:24em;
+}
+
+#ticket #ticket_info{
+    width:29em;
+    grid-column: 2 / span 1;
+}
+
+#ticket #ticket_info ul{
+    list-style:none;
+    
+    
+}
+
+#ticket #ticket_info li{
+    list-style:none;
+    border-bottom:0.01em solid #dedede;
+    padding: 0.4em;
+    overflow:visible;
+    display: flex;
+    justify-content: space-between;   
+}
+
+#ticket #ticket_info li span {
+    align-self: flex-end;
+}
+
+#ticket #ticket_info li .info{
+    float:right;
+}
+
+#ticket #ticket_info #edit_ticket{
+    text-align: center;
+    color: #3d3d3d;
+    background-color: #dedede;
+    float:right;
+    
+    padding:0.8em;
+    border-radius:17px;
+    border:0px;
+    font-weight: bold;
+    height: 3.4em;
+    font-size:1em;
+    
+}
+
+#ticket #ticket_info #submit_ticket{
+    text-align: center;
+    color: #3d3d3d;
+    background-color: #dedede;
+    float:right;
+    
+    padding:0.8em;
+    border-radius:17px;
+    border:0px;
+    font-weight: bold;
+    height: 3.4em;
+    font-size:1em;
+    
+}
+
+#ticket #ticket_info select{
+    text-align: center;
+    background-color: #3d3d3d;
+    border: 0px;
+    color: #dedede;
+    border-radius: 10px;
+}
+
+
+#ticket h2{
+    font-size: 1em;
+    border-bottom:0.01em solid #dedede;
+    
+}
+#comments{
+    grid-column: 1/ span 2;
+}
+
+#comments #title{
+    width:33em;
+    border-bottom:0.01em solid #dedede;
+}
+
+#comments #comment{
+    border-bottom:0.01em solid #dedede;
+    margin-top: 1em;
+    width:58em;
+    word-wrap: break-word;
+}
+
+#comments #comment #user_info{
+    display: grid;
+    grid-template-columns: 3.3em 3.3em;
+    grid-gap:0em;
+
+}
+
+#comments #comment #user_info #user_image{
+    width:3em;
+    border-radius: 50%;
+    grid-column: 1 / span 1;
+    
+}
+
+
+#comments #comment #user_info #username{
+    grid-column:2/span1;
+    margin:0em;
+    
+}
+
+#comments #comment #user_info #date{
+    grid-column: 2/span1;
+    margin:0em;
+    margin-top:-2.2em;
+    font-size:0.8em;
+}
+
+#comments #post_comment{
+ display: flex;
+  align-items: center;
+  padding:1em;
+}
+
+#comments #post_comment #post_comment_text{
+    background-color:#2d2d2d;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    resize:none;
+    padding: 1em;
+    width:58em;
+    
+
+}
+
+#comments #post_comment #post_comment_text:focus{
+
+outline:none;
+
+}
+
+#comments #post_comment #post_comment_button{
+    text-align: center;
+    color: #3d3d3d;
+    background-color: #dedede;
+    
+    
+    padding:0.8em;
+    border-radius:17px;
+    border:0px;
+    font-weight: bold;
+    height: 3.4em;
+    font-size:1em;
+    
+}
+
+/*fim do css do branch ticket-page////////*/
+
+#profile {
+    height: 30em;
+    width: 65em;
+    padding: 3em;
+    background-color: #2d2d2d;
+    border-radius: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5em;
+}
+
+.profile-left {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.profile-left img {
+    width: 10em;
+    border-radius: 50%;
+}
+
+.profile-left h2 {
+    margin: auto;
+    font-size: 2em;
+    margin-top: 0.5em;
+}
+
+.profile-left h2:nth-of-type(2) {
+    margin-top: 0;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.profile-right{
+    width: 50%;
+}
+
+.profile-right li {
+    font-size: 1.5em;
+}
+
+#edit-profile {
+    height: 20em;
+    width: 45em;
+    padding: 3em;
+    background-color: #2d2d2d;
+    border-radius: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-prof-button {
+    margin-top: 2em;
+    float: right;
+    background-color: #DEDEDE;
+    width: 12em;
+    height: 4em;
+    border: none;
+    border-radius: 20px;
+}
+
+.edit-prof-button a {
+    font-size: 1.5em;
+}
+
+.edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 60%;
+    float: left;
+}
+
+.edit-prof-button a {
+    color: #3D3D3D;
+    font-weight: 600;
+}
+
+.edit-profile-form label {
+    padding: 0.5em;
+    background-color: #9d9d9d;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.edit-profile-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+
+.edit-profile-form button {
+    width: 13em;
+    height: 5em;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    background-color: #DEDEDE;
+    color: #3D3D3D;
+}
+
+#new-ticket {
+    height: 30em;
+    width: 65em;
+    padding: 2em;
+    background-color: #2d2d2d;
+    border-radius: 30px;
+    display: flex;
+    margin: auto;
+}
+
+.new-ticket-form {
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.new-ticket-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-ticket-form input {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 100%;
+    height: 2.5em;
+    margin-bottom: 1em;
+    background-color: #9d9d9d;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+}
+
+.new-ticket-form textarea {
+    padding: 0.5em;
+    width: 100%;
+    resize: none;
+    height: 9em;
+    margin-bottom: 1em;
+    background-color: #9d9d9d;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.new-ticket-form select {
+    width: 10em;
+    height: 3em;
+    margin-bottom: 2em;
+    padding: 0.3em;
+    background-color: #DEDEDE;
+    color: #3D3D3D;
+    font-weight: 600;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 50px;
+}
+
+.new-ticket-form button {
+    width: 5em;
+    height: 1.5em;
+    font-size: 1.4em;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    align-items: center;
+}
+
+.new-ticket-right {
+    width: 40%;
+    margin: auto;
+   align-content: center;
+}
+
+.new-ticket-right img {
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    display: block;
+}
+
+.new-ticket-right p {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 70%;
+    font-size: 1.07em;
+    text-align: justify;
+}
+
+footer {
+    height: 2em;
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    background-color: #2d2d2d;
+    gap: 1em;
+    position: fixed;
+    bottom: 0;
+}
+
+footer .social img {
+    height: 2em;
+}
+
+
+
+/*removable é adicionado aos hashtags quando clicamos no edit ticket*/
+.removable:hover::before{
+    content:"x";
+    color:red;
+}
+
+.removable{
+    
+    background-color: #2d2d2d; ;
+    border-radius: 7px;
+    font-size: 0.7em;
+    margin-top:0.4em;
+}
+
+.removable:hover{
+
+   background-color: #4d4d4d;
+}
+
+.remove{
+    display: none;
+}
+
+.faqs{
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    overflow-y: auto;
+    width:50em;
+    height: 90vh;
+    padding:1em;
+}
+.faq{
+    padding:1em;
+    border-bottom: 2px solid #2d2d2d;
+}
+
+.faq:last-of-type{
+    border-bottom: none;
+}
+
+.faq_title {
+    margin: auto;
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+.faq_title img{
+    padding-left: 1em;
+    width:2.5em;
+
+}
+
+.question{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding-bottom: 0.5em;
+}
+
+.answer {
+    text-align: justify;
+}
+
+.faqs::-webkit-scrollbar {
+    display: none;
+}
+
+#post_faq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:1em;
+}
+
+#post_faq_question{
+    background-color: #2d2d2d;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    resize: none;
+    padding: 1em;
+    width: 20em;
+    outline:none;
+}
+
+#post_faq_answer{
+    background-color: #2d2d2d;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    resize: none;
+    padding: 1em;
+    width: 20em;
+    outline:none;
+}
+
+#post_faq_button{
+    text-align: center;
+    color: #3d3d3d;
+    background-color: #dedede;
+    padding: 0.8em;
+    border-radius: 17px;
+    border: 0px;
+    font-weight: bold;
+    height: 3.4em;
+    font-size: 1em;
+}
+
+@media (min-width: 980px) and (max-width: 1600px) {
+
+    wrapper {
+        grid-template-columns: 13em auto;
+    }
+
+    .sidebar {
+        height: 100%;
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+    }
+    
+    .sidebar-top {
+        gap: 1em;
+    }
+    
+    
+    .sidebar #user_image{
+        width:4.5em;
+        margin-top: 0;
+    }
+    
+    .sidebar #user h2 {
+        font-size: 0.7em;
+    }
+    
+    .sidebar #user h2:first-of-type {
+        font-size: 1em;
+    }
+    
+    .sidebar #new_ticket{
+        width:11em;
+        height:3.5em;
+        margin-bottom: 1em;
+    }
+    
+    .sidebar #new_ticket_image{
+        width:2em;
+    }
+    
+    .sidebar #new_ticket p{
+        font-size: 1.2em;
+    }
+    
+    .sidebar ul li {
+        padding-bottom:0.6em;
+        font-size: 1.5em;
+    }
+    
+    
+    .sidebar #logout{
+        margin-top: 0em;
+        font-size: 0.7em;
+        width: 9em;
+        height: 2.7em;
+    }
+
+    #tickets, #profile, #edit-profile, #new-ticket, #ticket {
+        grid-column: 2;
+        height: 22em;
+        width: 43em;
+        padding: 2.5em;
+    }
+    
+    #tickets .tickets-forms {
+        display: flex;
+        gap: 1em;
+    }
+    
+    .tickets-forms select {
+        height: 2em;
+        width: 8em;
+        border: none;
+    }
+    
+    .tickets-info {
+        table-layout: fixed;
+    }
+    
+    .tickets-table thead{
+        height: 3em;
+    }
+    .tickets-table tbody{
+        background-color: #EFEFEF;
+    }
+      
+    td {
+        height: 4em;
+    }
+
+    
+    .profile-left img {
+        width: 8em;
+        margin: auto;
+    }
+    
+    .profile-left h2 {
+        font-size: 1.5em;
+    }
+    
+    .profile-left h2:nth-of-type(2) {
+        font-size: 1.2em;
+    }
+    
+    .profile-right li {
+        font-size: 1.2em;
+    }
+
+    .edit-prof-button {
+        width: 9em;
+        height: 3em;
+        border-radius: 14px;
+    }
+    
+    .edit-prof-button a {
+        font-size: 1.2em;
+    }
+
+    #edit-profile {
+        gap: 2em;
+    }
+
+    .edit-profile-form {
+        width: 65%;
+    }
+
+    .edit-profile-form label {
+        display: flex;
+        font-size: 0.9em;
+    }
+
+    .edit-profile-form input {
+        margin-right: 1em;
+        flex-grow: 1;
+    }
+
+    .edit-profile-form button {
+        width: 10em;
+        height: 3.5em;
+        border-radius: 15px;
+        font-size: 0.7em;
+    }
+
+    #new-ticket {
+        margin: auto;
+        padding: 1em;
+    }
+    
+    .new-ticket-form {
+        padding: 1em;
+    }
+    
+    .new-ticket-form input {
+        height: 2em;
+        font-size: 1em;
+    }
+    
+    .new-ticket-form textarea {
+        height: 6em;
+        font-size: 1em;
+    }
+    
+    .new-ticket-form select {
+        width: 9em;
+        height: 2.6em;
+        font-size: 0.6em;
+        border-radius: 10px;
+    }
+    
+    .new-ticket-form button {
+        width: 5em;
+        height: 1.5em;
+        font-size: 1em;
+        border-radius: 10px;
+    }
+    
+    .new-ticket-right {
+        width: 40%;
+        padding: 2em;
+    }
+    
+    .new-ticket-right img {
+        width: 70%;
+    }
+    
+    .new-ticket-right p {
+        width: 70%;
+        font-size: 0.8em;
+        text-align:center;
+    }
+
+    #ticket {
+        width: 42em;
+        height: 20em;
+        padding: 2em;
+        flex-direction: column;
+    }
+    
+    #ticket h1 {
+        font-size: 1.6em;
+        width: 100%;
+    }
+    #ticket h2 {
+        padding-top: 0.8em;
+    }
+
+    .ticket-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+    }
+    
+    #description {
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 0;
+    }
+    
+    .ticket-desc h2 {
+        font-size: 1.3em;
+    }
+    
+    .ticket-info {
+        width: 40%;
+    }
+    
+    .ticket-info li, .profile-right li {
+        margin-top: 0.5em;
+    }
+    
+    .ticket-info li:first-child {
+        margin-top: 0;
+    }
+
+    #ticket #ticket_info #edit_ticket{
+        height: 3em;
+        font-size:0.8em;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+
+    #comments h2{
+        font-size: 1.3em;
+    }
+
+    #comments #comment-section #user_info #user_image{
+        width:2.5em;
+    }
+    
+    
+    #comments #comment-section #user_info #username{
+        font-size: 0.8em;       
+    }
+    
+    #comments #comment-section #user_info #date{
+        font-size: 0.65em;
+        margin-top:-2em;
+    }
+    
+    #comments #post-comment-form #post_comment_text{
+        font-size: 1em;
+        font-weight: 600;
+    }
+    
+    #comments #post-comment-form #post_comment_button{
+        width: 7em;
+        height: 2.8em;
+        font-size:0.8em;
+        border-radius:12px;
+        
+    }
+
+    .faqs{
+        width:35em;
+        overflow-y: auto;
+    }
+    
+    .faq_title h1 {
+        font-size: 1.8em;
+    }
+
+    .faq_title img{
+        padding-left: 1em;
+        width:2em;
+    }
+
+    .question{
+        font-size: 1.2em;
+    }
+    .answer {
+        font-size: 0.8em;
+    }
+
+    footer {
+        height: 1.6em;
+        padding: 0.4em;
+        font-size: 0.8em;
+        gap: 1em;
+    }
+    
+    footer .social img {
+        height: 1.4em;
+        
+    }
+}
+
+@media (max-height: 480px) {
+    #tickets, #profile, #edit-profile, #new-ticket, #ticket {
+        height: 18em;
+    }
+}
+
+@media (min-width:720px) and (max-width: 980px) {
+
+    .wrapper #logo h1 {
+        font-size: 2em;
+    }
+
+    .wrapper #logo h3 {
+        font-size: 0.8em;
+    }
+
+    .wrapper form img {
+        width: 2.2em;
+    }
+
+    .wrapper form input {
+        font-size: 0.8em;
+        padding: 0.8em;
+        padding-left: 1.2em;
+        border-radius: 10px !important;
+    }
+
+    .wrapper form #button {
+        width: 8em;
+        height: 2em;    
+    }
+
+    .wrapper form h4 {
+        font-size: 0.8em;
+    }
+
+    wrapper {
+        grid-template-columns: 1fr minmax(0, 4fr);
+    }
+
+    .sidebar {
+        height: 100%;
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+    }
+    
+    .sidebar-top {
+        gap: 1em;
+    }
+    
+    
+    .sidebar #user_image{
+        width:4.5em;
+        margin-top: 0;
+    }
+    
+    .sidebar #user h2 {
+        font-size: 0.6em;
+    }
+    
+    .sidebar #user h2:first-of-type {
+        font-size: 0.9em;
+    }
+    
+    .sidebar #new_ticket{
+        width:8em;
+        height:3em;
+        margin-bottom: 1em;
+    }
+    
+    .sidebar #new_ticket_image{
+        width:1.6em;
+    }
+    
+    .sidebar #new_ticket p{
+        font-size: 1em;
+    }
+    
+    .sidebar ul li {
+        padding-bottom:0.6em;
+        font-size: 1.5em;
+    }
+    
+    
+    .sidebar #logout{
+        margin-top: 0em;
+        font-size: 0.7em;
+        width: 9em;
+        height: 2.7em;
+    }
+
+    #tickets, #profile, #edit-profile, #new-ticket {
+        height: 20em;
+        width: 30em;
+        padding: 2em;
+        overflow: hidden;
+    }
+
+    .titles h2 {
+        font-size: 1em;
+    }
+    
+    #tickets .tickets-forms {
+        gap: 0.8em;
+    }
+
+    .tickets-forms select {
+        height: 2em;
+        width: 8em;
+        border: none;
+        font-size: 0.6em;
+    }
+    
+    .tickets-info {
+        table-layout: fixed;
+    }
+    
+    .tickets-table thead{
+        height: 2.5em;
+    }
+    .tickets-table tbody{
+        background-color: #EFEFEF;
+    }
+      
+    td {
+        height: 2.5em;
+        font-size: 0.8em;
+    }
+
+    .profile-left {
+        width: 25%;
+    }
+    
+    .profile-left img {
+        width: 6em;
+        margin: auto;
+    }
+    
+    .profile-left h2 {
+        font-size: 1.3em;
+    }
+    
+    .profile-left h2:nth-of-type(2) {
+        font-size: 1em;
+    }
+    
+    .profile-right {
+        width: 60%;
+    }
+
+    .profile-right li {
+        font-size: 0.9em;
+    }
+
+    .edit-prof-button {
+        width: 7em;
+        height: 2.6em;
+        border-radius: 14px;
+    }
+    
+    .edit-prof-button a {
+        font-size: 0.9em;
+    }
+
+    #edit-profile {
+        gap: 2em;
+    }
+
+    .edit-profile-form {
+        width: 65%;
+    }
+
+    .edit-profile-form label {
+        display: flex;
+        font-size: 0.75em;
+    }
+
+    .edit-profile-form input {
+        margin-right: 1em;
+        flex-grow: 1;
+    }
+
+    .edit-profile-form button {
+        width: 10em;
+        height: 3.5em;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.7em;
+    }
+
+    #new-ticket {
+        padding: 1em;
+    }
+
+    #new-ticket h2 {
+        font-size: 1em;
+    }
+    
+    .new-ticket-form {
+        width: 60%;
+    }
+
+    .new-ticket-form label {
+        font-size: 0.8em;
+    }
+    
+    .new-ticket-form input {
+        height: 2em;
+        font-size: 0.8em;
+    }
+    
+    .new-ticket-form textarea {
+        height: 8em;
+        font-size: 0.8em;
+    }
+    
+    .new-ticket-form select {
+        width: 8.5em;
+        height: 2.4em;
+        font-size: 0.6em;
+        margin-right: 0.5em;
+        border-radius: 10px;
+    }
+    
+    .new-ticket-form button {
+        width: 5em;
+        height: 2em;
+        padding: 0.5em;
+        font-size: 0.7em;
+        border-radius: 10px;
+    }
+    
+    .new-ticket-right {
+        width: 40%;
+        padding: 2em;
+    }
+    
+    .new-ticket-right img {
+        width: 90%;
+    }
+    
+    .new-ticket-right p {
+        width: 90%;
+        font-size: 0.8em;
+        text-align:center;
+    }
+
+    #ticket {
+        margin: auto;
+        width: 30em;
+        height: 20em;
+        padding: 2em;
+        flex-direction: column;
+    }
+    
+    #ticket h1 {
+        font-size: 1.2em;
+        width: 100%;
+    }
+    #ticket h2 {
+        font-size: 0.9em;
+        padding-top: 0.4em;
+    }
+
+    .ticket-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5em;
+    }
+    
+    #description {
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    #description p {
+        font-size: 0.7em;
+    }
+    
+    .ticket-desc h2 {
+        font-size: 1.3em;
+    }
+    
+    #ticket_info {
+        width: 40%;
+    }
+    
+    #ticket_info li, .profile-right li {
+        margin-top: 0;
+    }
+
+    #ticket_info li {
+        height: 1em;
+        vertical-align: middle;
+    }
+
+    #ticket_info li span {
+        font-size: 0.65em;
+        vertical-align: middle;
+    }
+
+    #ticket #ticket_info #edit_ticket{
+        height: 3em;
+        font-size:0.8em;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+
+    #comments p{
+        font-size: 0.9em;
+    }
+
+    #comments #post_comment_text{
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+    
+    #comments button{
+        width: 10em;
+        height: 2.5em;
+        border-radius:12px;
+        
+    }
+    #comments #post_comment #post_comment_button {
+        font-size: 0.9em;
+    }
+
+    #comments #comment #user_info {
+        grid-template-columns: 2.5em 3.3em;
+    }
+
+    #comments #comment #user_info #user_image{
+        width:2em;
+    }
+    
+    #comments #comment #user_info #username{
+        font-size: 0.8em;       
+    }
+    
+    #comments #comment #user_info #date{
+        font-size: 0.65em;
+        margin-top:-1.6em;
+    }
+
+    #comment p {
+        font-size: 0.7em;
+        padding: 0.2em 0;
+    }
+
+    .faqs{
+        width:28em;
+        overflow-y: auto;
+    }
+    
+    .faq_title h1 {
+        font-size: 1.3em;
+    }
+
+    .faq_title img{
+        padding-left: 0.8em;
+        width:1.6em;
+    }
+
+    .question{
+        font-size: 0.9em;
+    }
+    .answer {
+        font-size: 0.7em;
+    }
+
+    footer {
+        height: 1.3em;
+        padding: 0.4em;
+        font-size: 0.65em;
+        gap: 1em;
+    }
+    
+    footer .social img {
+        height: 1.2em;
+        
+    }
+}
+
+@media (min-width:520px) and (max-width: 720px) {
+
+    .wrapper #logo h1 {
+        font-size: 1.5em;
+    }
+
+    .wrapper #logo h3 {
+        font-size: 0.8em;
+    }
+
+    .wrapper form img {
+        width: 2.2em;
+    }
+
+    .wrapper form input {
+        font-size: 0.8em;
+        padding: 0.8em;
+        padding-left: 1.2em;
+        border-radius: 10px !important;
+        width: 10em;
+    }
+
+    .wrapper form #button {
+        width: 8em;
+        height: 2em;    
+    }
+
+    .wrapper form h4 {
+        font-size: 0.8em;
+    }
+
+    wrapper {
+        grid-template-columns: 1fr minmax(0, 4fr);
+    }
+    
+    .sidebar-top {
+        gap: 0.5em;
+    }
+    
+    
+    .sidebar #user_image{
+        width:4em;
+        margin-top: 0;
+    }
+    
+    .sidebar #user h2 {
+        font-size: 0.6em;
+    }
+    
+    .sidebar #user h2:first-of-type {
+        font-size: 0.9em;
+    }
+    
+    .sidebar #new_ticket{
+        width:8em;
+        height:3em;
+        margin-bottom: 1em;
+    }
+    
+    .sidebar #new_ticket_image{
+        width:1.6em;
+    }
+    
+    .sidebar #new_ticket p{
+        font-size: 1em;
+    }
+    
+    .sidebar ul li {
+        padding-bottom:0.6em;
+        font-size: 1.2em;
+    }
+    
+    
+    .sidebar #logout{
+        margin-top: 0em;
+        margin-bottom: 1.6em;
+        font-size: 0.6em;
+        width: 9em;
+        height: 2.7em;
+    }
+
+    #tickets, #profile, #edit-profile, #new-ticket {
+        height: 15em;
+        width: 22em;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    .titles h2 {
+        font-size: 1em;
+    }
+    
+    #tickets .tickets-forms {
+        gap: 0.8em;
+    }
+
+    .tickets-forms select {
+        height: 2em;
+        width: 7.5em;
+        border: none;
+        font-size: 0.45em;
+    }
+    .tickets-forms form:first-of-type select {
+        height: 2em;
+        width: 9em;
+        border: none;
+        font-size: 0.45em;
+    }
+    
+    .tickets-info {
+        table-layout: fixed;
+        height: 70%;
+    }
+    
+    .tickets-table thead{
+        height: 2em;
+    }
+    .tickets-table thead tr{
+        font-size: 0.7em;
+    }
+    .tickets-table tbody{
+        background-color: #EFEFEF;
+    }
+      
+    td {
+        height: 2em;
+        font-size: 0.6em;
+    }
+    .tickets-table button{
+        font-size: 0.8em;
+    }
+
+    .profile-left {
+        width: 60%;
+    }
+    
+    .profile-left img {
+        width: 4.5em;
+        margin: auto;
+    }
+    
+    .profile-left h2 {
+        font-size: 1em;
+    }
+    
+    .profile-left h2:nth-of-type(2) {
+        font-size: 0.6em;
+    }
+    
+    .profile-right {
+        width: 100%;
+    }
+
+    .profile-right ul {
+        width: 100%;
+    }
+
+    .profile-right li {
+        font-size: 0.7em;
+    }
+
+    .edit-prof-button {
+        width: 6.5em;
+        height: 2.4em;
+        border-radius: 14px;
+    }
+    
+    .edit-prof-button a {
+        font-size: 0.75em;
+    }
+
+    #edit-profile {
+        gap: 1.8em;
+    }
+
+    .edit-profile-form {
+        width: 80%;
+    }
+
+    .edit-profile-form label {
+        display: flex;
+        font-size: 0.5em;
+    }
+
+    .edit-profile-form input {
+        margin-right: 1em;
+        flex-grow: 1;
+    }
+
+    .edit-profile-form button {
+        width: 8em;
+        height: 3.2em;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.6em;
+    }
+
+    #new-ticket {
+        padding: 1em;
+    }
+
+    #new-ticket h2 {
+        font-size: 0.8em;
+    }
+    
+    .new-ticket-form {
+        width: 60%;
+        padding: 0.5em;
+        gap: 0.3em;
+    }
+
+    .new-ticket-form label {
+        font-size: 0.7em;
+    }
+    
+    .new-ticket-form input {
+        height: 2em;
+        font-size: 0.7em;
+    }
+    
+    .new-ticket-form textarea {
+        height: 7em;
+        font-size: 0.7em;
+    }
+    
+    .new-ticket-form select {
+        width: 9em;
+        height: 2.2em;
+        font-size: 0.5em;
+        margin-right: 0.5em;
+        border-radius: 10px;
+    }
+    
+    .new-ticket-form button {
+        width: 6em;
+        height: 2.2em;
+        padding: 0.5em;
+        font-size: 0.7em;
+        border-radius: 8px;
+    }
+    
+    .new-ticket-right {
+        width: 40%;
+        padding: 1em;
+    }
+    
+    .new-ticket-right img {
+        width: 90%;
+    }
+    
+    .new-ticket-right p {
+        width: 90%;
+        font-size: 0.7em;
+        text-align:center;
+    }
+
+    #ticket {
+        width: 22em;
+        height: 15em;
+        margin: auto;
+        flex-direction: column;
+        padding: 1em;
+    }
+    
+    #ticket h1 {
+        font-size: 1.1em;
+        width: 100%;
+    }
+    #ticket h2 {
+        font-size: 0.8em;
+        padding-top: 0.4em;
+    }
+
+    .ticket-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5em;
+    }
+    
+    #description {
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    #description p {
+        font-size: 0.7em;
+    }
+    
+    .ticket-desc h2 {
+        font-size: 1.3em;
+    }
+    
+    #ticket_info {
+        width: 40%;
+    }
+    
+    #ticket_info li, .profile-right li {
+        margin-top: 0;
+    }
+
+    #ticket_info li {
+        height: 1em;
+        vertical-align: middle;
+    }
+
+    #ticket_info li span {
+        font-size: 0.65em;
+        vertical-align: middle;
+    }
+
+    #ticket #ticket_info #edit_ticket{
+        height: 3em;
+        font-size:0.8em;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+
+    #comments p{
+        font-size: 0.9em;
+    }
+
+    #comments #post_comment_text{
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+    
+    #comments button{
+        width: 14em;
+        height: 2.5em;
+        border-radius:10px;
+    }
+    
+    #comments #post_comment #post_comment_button {
+        font-size: 0.7em;
+    }
+
+    #comments #comment #user_info {
+        grid-template-columns: 2.5em 3.3em;
+    }
+
+    #comments #comment #user_info #user_image{
+        width:2em;
+    }
+    
+    #comments #comment #user_info #username{
+        font-size: 0.8em;       
+    }
+    
+    #comments #comment #user_info #date{
+        font-size: 0.65em;
+        margin-top:-1.6em;
+    }
+
+    #comment p {
+        font-size: 0.7em;
+        padding: 0.2em 0;
+    }
+
+    .faqs{
+        width:20em;
+        overflow-y: auto;
+    }
+    
+    .faq_title h1 {
+        font-size: 1em;
+    }
+
+    .faq_title img{
+        padding-left: 0.78em;
+        width:1.6em;
+    }
+
+    .question{
+        font-size: 0.8em;
+    }
+    .answer {
+        font-size: 0.6em;
+    }
+
+    footer {
+        height: 1.2em;
+        padding: 0.4em;
+        font-size: 0.6em;
+        gap: 1em;
+    }
+    
+    footer .social img {
+        height: 1.1em;
+        
+    }
+
+}
+
+@media (max-width:520px){
+
+    .wrapper #logo h1 {
+        font-size: 1em;
+    }
+
+    .wrapper #logo h3 {
+        font-size: 0.7em;
+    }
+
+    .wrapper form img {
+        display: none;
+    }
+
+    .wrapper form input {
+        font-size: 0.7em;
+        padding: 0.7em;
+        padding-left: 1em;
+        border-radius: 10px !important;
+    }
+
+    .wrapper form #button {
+        width: 7em;
+        height: 2em;    
+    }
+
+    .wrapper form h4 {
+        font-size: 0.6em;
+    }
+
+    wrapper {
+        grid-template-columns: 1fr minmax(0, 4fr);
+    }
+    
+    .sidebar-top {
+        gap: 0.5em;
+        margin: 0 auto;
+    }
+    
+    
+    .sidebar #user_image{
+        width:3em;
+        margin-top: 0;
+    }
+    
+    .sidebar #user h2 {
+        font-size: 0.5em;
+    }
+    
+    .sidebar #user h2:first-of-type {
+        font-size: 0.75em;
+    }
+    
+    .sidebar #new_ticket{
+        width:100%;
+        height:3em;
+    }
+    
+    .sidebar #new_ticket_image{
+        width: 1em;
+        margin-right: 0.3em;
+        margin-left: 0.4em;
+    }
+    
+    .sidebar #new_ticket p{
+        width: 4.5em;
+        font-size: 0.7em;
+    }
+    
+    .sidebar ul li {
+        padding-bottom:0.6em;
+        font-size: 0.9em;
+    }
+    
+    
+    .sidebar #logout{
+        margin-top: 0em;
+        margin-bottom: 1.6em;
+        font-size: 0.4em;
+        width: 7em;
+        height: 2.4em;
+    }
+
+    #tickets, #profile, #edit-profile, #new-ticket {
+        height: 20em;
+        width: 17em;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    .titles h2 {
+        font-size: 0.8em;
+    }
+    
+    #tickets .tickets-forms {
+        gap: 0.5em;
+    }
+
+    .tickets-forms select {
+        height: 2em;
+        width: 7.5em;
+        border: none;
+        font-size: 0.45em;
+    }
+    .tickets-forms form:first-of-type select {
+        height: 2em;
+        width: 9em;
+        border: none;
+        font-size: 0.45em;
+    }
+    
+    .tickets-info {
+        table-layout: fixed;
+        height: 70%;
+    }
+    
+    .tickets-table thead{
+        height: 2em;
+    }
+    .tickets-table thead tr{
+        font-size: 0.35em;
+    }
+    .tickets-table tbody{
+        background-color: #EFEFEF;
+    }
+      
+    td {
+        height: 2em;
+        font-size: 0.35em;
+    }
+    .tickets-table button{
+        font-size: 0.45em;
+    }
+
+    #profile {
+        gap: 2em;
+    }
+
+    .profile-left {
+        width: 5em;
+    }
+    
+    .profile-left img {
+        width: 3em;
+        margin: auto;
+    }
+    
+    .profile-left h2 {
+        font-size: 1em;
+        margin: auto;
+    }
+    
+    .profile-left h2:nth-of-type(2) {
+        font-size: 0.5em;
+    }
+    
+    .profile-right {
+        width: 70%;
+    }
+
+    .profile-right ul {
+        width: 100%;
+    }
+
+    .profile-right li {
+        font-size: 0.5em;
+    }
+
+    .edit-prof-button {
+        width: 5.5em;
+        height: 2em;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+    
+    .edit-prof-button a {
+        font-size: 0.6em;
+    }
+
+    #edit-profile {
+        gap: 1.8em;
+    }
+
+    .edit-profile-form {
+        width: 80%;
+        gap: 1.4em;
+    }
+
+    .edit-profile-form label {
+        display: flex;
+        font-size: 0.5em;
+    }
+
+    .edit-profile-form input {
+        margin-right: 1em;
+        flex-grow: 1;
+    }
+
+    .edit-profile-form button {
+        width: 8em;
+        height: 3.2em;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.6em;
+    }
+
+    #new-ticket {
+        padding: 1em;
+    }
+
+    #new-ticket h2 {
+        font-size: 0.8em;
+    }
+    
+    .new-ticket-form {
+        width: 60%;
+        padding: 0.5em;
+        gap: 0.3em;
+    }
+
+    .new-ticket-form label {
+        font-size: 0.7em;
+    }
+    
+    .new-ticket-form input {
+        height: 2em;
+        font-size: 0.7em;
+    }
+    
+    .new-ticket-form textarea {
+        height: 10em;
+        font-size: 0.7em;
+    }
+    
+    .new-ticket-form select {
+        width: 7em;
+        height: 2.2em;
+        font-size: 0.5em;
+        margin-right: 0.5em;
+        border-radius: 10px;
+    }
+    
+    .new-ticket-form button {
+        width: 6em;
+        height: 2.2em;
+        padding: 0.5em;
+        font-size: 0.7em;
+        border-radius: 8px;
+    }
+    
+    .new-ticket-right {
+        width: 45%;
+        padding: 1em;
+    }
+    
+    .new-ticket-right img {
+        width: 90%;
+    }
+    
+    .new-ticket-right p {
+        width: 90%;
+        font-size: 0.55em;
+        text-align:center;
+    }
+
+    #ticket {
+        width: 15em;
+        height: 20em;
+        margin: auto;
+        flex-direction: column;
+        padding: 1em;
+    }
+    
+    #ticket h1 {
+        font-size: 1em;
+        width: 100%;
+    }
+    #ticket h2 {
+        font-size: 0.75em;
+        padding-top: 0.4em;
+    }
+
+    .ticket-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5em;
+    }
+    
+    #description {
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    #description p {
+        font-size: 0.5em;
+    }
+    
+    .ticket-desc h2 {
+        font-size: 1.3em;
+    }
+    
+    #ticket #ticket_info {
+        width: 30em;
+    }
+    
+    #ticket_info li, .profile-right li {
+        margin-top: 0;
+    }
+
+    #ticket_info li {
+        height: 1em;
+        align-items: baseline;
+    }
+
+    #ticket_info li span {
+        font-size: 0.45em;
+    }
+
+
+    #ticket #ticket_info #edit_ticket{
+        height: 3em;
+        font-size:0.8em;
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+
+    #comments p{
+        font-size: 0.6em;
+    }
+
+    #comments #post_comment_text{
+        font-size: 0.5em;
+        font-weight: 600;
+    }
+    
+    #comments button{
+        width: 14em;
+        height: 2em;
+        border-radius:2px;
+    }
+    
+    #comments #post_comment #post_comment_button {
+        font-size: 0.5em;
+    }
+
+    #comments #comment #user_info {
+        grid-template-columns: 2.5em 3.3em;
+    }
+
+    #comments #comment #user_info #user_image{
+        width:2em;
+    }
+    
+    #comments #comment #user_info #username{
+        font-size: 0.5em;       
+    }
+    
+    #comments #comment #user_info #date{
+        font-size: 0.45em;
+        margin-top:-2em;
+    }
+
+    #comment p {
+        font-size: 0.5em;
+        padding: 0.2em 0;
+    }
+
+    .faqs{
+        width:15em;
+        overflow-y: auto;
+    }
+    
+    .faq_title h1 {
+        font-size: 0.8em;
+    }
+
+    .faq_title img{
+        padding-left: 0.7em;
+        width:1.6em;
+    }
+
+    .question{
+        font-size: 0.8em;
+    }
+    .answer {
+        font-size: 0.6em;
+    }
+
+    footer {
+        height: 1.2em;
+        padding: 0.4em;
+        font-size: 0.55em;
+        gap: 1em;
+    }
+    
+    footer .social img {
+        height: 1.1em;
+        
+    }
+
+}
